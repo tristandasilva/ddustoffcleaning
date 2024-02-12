@@ -23,7 +23,7 @@ const Dropdown = () => {
         ></Image>
       </button>
       {!isOpen && (
-        <div className='absolute border p-5 right-3 rounded'>
+        <div className='absolute border p-5 right-3 rounded z-50 bg-white'>
           <ul className='flex flex-col gap-3'>
             <DropdownItemList dropdownItems={dropdownItems} />
           </ul>
