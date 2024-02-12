@@ -1,5 +1,6 @@
 import Navbar from './components/Nav/Navbar';
 import Link from 'next/link';
+import StyledButton from './components/StyledButton';
 
 export default function Home() {
   return (
@@ -8,17 +9,15 @@ export default function Home() {
         <Navbar />
         <div className='hero-section'>
           <div className='overlay'>
-            <div className='pl-48 pt-20'>
-              <h1 className='text-[48px] max-w-[550px]'>
+            <div className='md:ml-48 md:mr-0 mt-20 mx-5 flex flex-col max-w-[550px]'>
+              <h1 className='text-[48px] xl:text-[52px] leading-tight'>
                 The only cleaning service you&lsquo;ll need
               </h1>
-              <p className='font-sans max-w-[400px] text-gray-700 text-[18px] mt-1 mb-6'>
+              <p className='font-sans text-gray-700 text-[18px] mt-3 mb-8'>
                 Providing a wide array of convenient cleaning services in the
                 Ottawa-Gatineau area.
               </p>
-              <button>
-                <Link href='/quote'>Request A Quote</Link>
-              </button>
+              <StyledButton path='/quote' text='Request A Quote' />
             </div>
           </div>
         </div>
