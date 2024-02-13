@@ -9,7 +9,7 @@ export default function Home() {
         <Navbar />
         <div className='hero-section'>
           <div className='overlay'>
-            <div className='md:ml-48 md:mr-0 mt-20 mx-5 flex flex-col max-w-[550px]'>
+            <div className='md:ml-48 xl:ml-52 md:mr-0 mt-20 xl:mt-24 mx-5 text-center sm:text-start flex flex-col items-center sm:items-start max-w-[550px]'>
               <h1 className='text-[48px] xl:text-[52px] leading-tight'>
                 The only cleaning service you&lsquo;ll need
               </h1>
