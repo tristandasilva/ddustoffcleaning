@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  scroll-padding-top: 10rem;
+}
+
 .hero-section {
   background-image: url('/hero-img-min.png');
   background-repeat: no-repeat;
@@ -29,4 +33,8 @@ li a {
   padding: 15px 50px;
   background-color: #d2f2fa;
   box-shadow: 7px 7px 0px #ffefbe;
+}
+
+.boxShad {
+  border-bottom: 20px solid #ffefbe;
 }
