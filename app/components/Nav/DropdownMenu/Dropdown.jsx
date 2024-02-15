@@ -22,7 +22,7 @@ const Dropdown = () => {
           alt='Menu icon'
         ></Image>
       </button>
-      {!isOpen && (
+      {isOpen && (
         <div className='absolute border p-5 right-3 rounded z-50 bg-white'>
           <ul className='flex flex-col gap-3'>
             <DropdownItemList dropdownItems={dropdownItems} />

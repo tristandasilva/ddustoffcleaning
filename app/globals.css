@@ -35,6 +35,15 @@ li a {
   box-shadow: 7px 7px 0px #ffefbe;
 }
 
+@media screen and (max-width: 768px) {
+  .styledBtn {
+    padding: 15px 20px;
+    width: 100%;
+  }
+}
+
 .boxShad {
   border-bottom: 20px solid #ffefbe;
+  line-height: 10px;
+  font-size: 32px;
 }

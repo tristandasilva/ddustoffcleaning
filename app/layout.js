@@ -1,8 +1,8 @@
-import { Inter, Playfair_Display_SC } from 'next/font/google';
+import { Inter, Playfair_Display } from 'next/font/google';
 import './globals.css';
 
 const inter = Inter({ subsets: ['latin'] });
-const playfair = Playfair_Display_SC({ weight: '400', subsets: ['latin'] });
+const playfair = Playfair_Display({ weight: '400', subsets: ['latin'] });
 
 export const metadata = {
   title: 'DDustOffCleaning',
