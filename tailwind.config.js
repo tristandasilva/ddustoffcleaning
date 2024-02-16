@@ -14,6 +14,8 @@ module.exports = {
       },
       colors: {
         'darker-blue': 'var(--darker-blue)',
+        'black-blue': 'var(--black-blue)',
+        'paragraph-blue': 'var(--paragraph-blue)',
       },
     },
   },

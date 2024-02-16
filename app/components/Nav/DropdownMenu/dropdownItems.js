@@ -1,19 +1,15 @@
 export const dropdownItems = [
   {
     text: 'About',
-    path: '/#about-section',
+    path: '/#about',
   },
   {
     text: 'Services',
-    path: '/#services-section',
+    path: '/#services',
   },
   {
     text: 'Request A Quote',
     path: '/quote',
-  },
-  {
-    text: 'Contact',
-    path: '/#contact',
   },
   {
     text: 'FAQ',

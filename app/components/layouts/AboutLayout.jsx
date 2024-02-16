@@ -4,11 +4,8 @@ import Link from 'next/link';
 
 const AboutLayout = () => {
   return (
-    <div
-      id='about-section'
-      className='my-[100px] px-[25px] md:px-[100px] mt-20'
-    >
-      <div className='flex gap-10 flex-col lg:flex-row justify-between items-center'>
+    <div id='about' className='my-[100px] px-[25px] md:px-[100px] mt-20'>
+      <div className='flex gap-10 lg:gap-28 flex-col lg:flex-row justify-between lg:justify-center items-center'>
         <div className='flex-shrink-0'>
           <Image
             src={'/about-img.png'}
