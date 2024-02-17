@@ -7,13 +7,13 @@ const TestimonialSlider = ({ testimonials }) => {
   const [currentTestimonialIndex, setCurrentTestimonialIndex] = useState(0);
 
   useEffect(() => {
-    const intervalId = setInterval(() => {
+    const testimonialInterval = setInterval(() => {
       setCurrentTestimonialIndex(
         (prevIndex) => (prevIndex + 1) % testimonials.length
       );
     }, 3000);
 
-    return () => clearInterval(intervalId);
+    return () => clearInterval(testimonialInterval);
   }, [testimonials.length]);
 
   return (

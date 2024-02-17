@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import services from '@/app/components/Services/services';
 
 const QuotationForm = () => {
   const [formData, setFormData] = useState({
@@ -19,14 +20,53 @@ const QuotationForm = () => {
     additionalNotes: '',
   });
 
+  const [formSent, setFormSent] = useState(false);
+  const [sending, setSending] = useState(false);
+
+  const clearForm = () => {
+    setFormData({
+      firstName: '',
+      lastName: '',
+      email: '',
+      phoneNumber: '',
+      address: '',
+      serviceRequested: '',
+      numBathrooms: '',
+      numBedrooms: '',
+      hasPets: '',
+      residenceType: '',
+      squareFootage: '',
+      carpetPercentage: '',
+      additionalNotes: '',
+    });
+  };
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Handle form submission here
+    setSending(true);
+    try {
+      const response = await fetch('/api/sendEmail', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+      if (response.ok) {
+        setFormSent(true);
+        clearForm();
+      } else {
+        alert('Failed to send email. Please try again later.');
+      }
+    } catch (error) {
+      console.error('Error sending email:', error);
+    }
+    setSending(false);
   };
 
   return (
@@ -105,10 +145,11 @@ const QuotationForm = () => {
             required
           >
             <option value=''>Select</option>
-            <option value='Residential'>Residential</option>
-            <option value='Airbnb'>Airbnb</option>
-            <option value='Organization'>Organization</option>
-            <option value='Laundry'>Laundry</option>
+            {services.map(({ type, index }) => (
+              <option key={index} value={type}>
+                {type}
+              </option>
+            ))}
           </select>
         </label>
         <label>
@@ -120,11 +161,17 @@ const QuotationForm = () => {
             required
           >
             <option value=''>Select</option>
-            {[1, 2, 3, 4, 5].map((num) => (
-              <option key={num} value={num}>
-                {num}
-              </option>
-            ))}
+            {[1, 2, 3, 4, 5].map((num) =>
+              num != 5 ? (
+                <option key={num} value={num}>
+                  {num}
+                </option>
+              ) : (
+                <option key={num} value={num}>
+                  {num}+
+                </option>
+              )
+            )}
           </select>
         </label>
         <label>
@@ -136,11 +183,17 @@ const QuotationForm = () => {
             required
           >
             <option value=''>Select</option>
-            {[1, 2, 3, 4, 5].map((num) => (
-              <option key={num} value={num}>
-                {num}
-              </option>
-            ))}
+            {[1, 2, 3, 4, 5].map((num) =>
+              num != 5 ? (
+                <option key={num} value={num}>
+                  {num}
+                </option>
+              ) : (
+                <option key={num} value={num}>
+                  {num}+
+                </option>
+              )
+            )}
           </select>
         </label>
       </div>
@@ -191,11 +244,11 @@ const QuotationForm = () => {
                 <input
                   type='radio'
                   name='residenceType'
-                  value='Apartment'
-                  checked={formData.residenceType === 'Apartment'}
+                  value='Apartment/Condo'
+                  checked={formData.residenceType === 'Apartment/Condo'}
                   onChange={handleChange}
                 />{' '}
-                Apartment
+                Apartment/Condo
               </label>
             </div>
             <div>
@@ -259,7 +312,17 @@ const QuotationForm = () => {
         ></textarea>
       </label>
 
-      <button type='submit'>Submit</button>
+      {sending ? (
+        <div className='mt-[28px]'>Sending request...</div>
+      ) : formSent ? (
+        <div className='form-sent'>
+          Request sent! We will be in touch with you shortly, thank you.
+        </div>
+      ) : (
+        <button type='submit' className='w-full md:w-auto'>
+          Submit
+        </button>
+      )}
     </form>
   );
 };
