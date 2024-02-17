@@ -59,6 +59,7 @@ const QuotationForm = () => {
     setFormData({ ...formData, [name]: value });
   };
 
+  const siteKey = '6LeK7nUpAAAAAOc-mMIo5LlRKrpDD3LTCSpySe_f';
   const handleRecaptchaChange = (token) => {
     setIsVerified(true);
     setRecaptchaToken(() => {
@@ -337,10 +338,7 @@ const QuotationForm = () => {
         ></textarea>
       </label>
       <div className='mt-5 flex flex-col gap-2'>
-        <ReCAPTCHA
-          sitekey={process.env.RECAPTCHA_SITE_KEY}
-          onChange={handleRecaptchaChange}
-        />
+        <ReCAPTCHA sitekey={siteKey} onChange={handleRecaptchaChange} />
         <p className='text-red-600'>{requestVerificationText}</p>
       </div>
       {sending ? (
