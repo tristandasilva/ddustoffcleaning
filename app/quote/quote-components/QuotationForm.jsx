@@ -1,9 +1,16 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import services from '@/app/components/Services/services';
+import ReCAPTCHA from 'react-google-recaptcha';
 
 const QuotationForm = () => {
+  const [formSent, setFormSent] = useState(false);
+  const [sending, setSending] = useState(false);
+  const [isVerified, setIsVerified] = useState(false);
+  const [recaptchaToken, setRecaptchaToken] = useState('');
+  const [requestVerificationText, setRequestVerificationText] = useState('');
+
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
@@ -20,9 +27,6 @@ const QuotationForm = () => {
     additionalNotes: '',
   });
 
-  const [formSent, setFormSent] = useState(false);
-  const [sending, setSending] = useState(false);
-
   const clearForm = () => {
     setFormData({
       firstName: '',
@@ -38,35 +42,56 @@ const QuotationForm = () => {
       squareFootage: '',
       carpetPercentage: '',
       additionalNotes: '',
+      recaptchaToken: '',
     });
   };
+
+  useEffect(() => {
+    // Update formData whenever recaptchaToken changes
+    setFormData((prevFormData) => ({
+      ...prevFormData,
+      recaptchaToken: recaptchaToken,
+    }));
+  }, [recaptchaToken]);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
   };
 
+  const handleRecaptchaChange = (token) => {
+    setIsVerified(true);
+    setRecaptchaToken(() => {
+      return token;
+    });
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setSending(true);
-    try {
-      const response = await fetch('/api/sendEmail', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData),
-      });
-      if (response.ok) {
-        setFormSent(true);
-        clearForm();
-      } else {
-        alert('Failed to send email. Please try again later.');
+    if (isVerified) {
+      setRequestVerificationText('');
+      setSending(true);
+      try {
+        const response = await fetch('/api/sendEmail', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(formData),
+        });
+        if (response.ok) {
+          setFormSent(true);
+          clearForm();
+        } else {
+          alert('Failed to send email. Please try again later.');
+        }
+      } catch (error) {
+        console.error('Error sending email:', error);
       }
-    } catch (error) {
-      console.error('Error sending email:', error);
+      setSending(false);
+    } else {
+      setRequestVerificationText('Please verify that you are not a robot.');
     }
-    setSending(false);
   };
 
   return (
@@ -311,7 +336,13 @@ const QuotationForm = () => {
           onChange={handleChange}
         ></textarea>
       </label>
-
+      <div className='mt-5 flex flex-col gap-2'>
+        <ReCAPTCHA
+          sitekey='6LeK7nUpAAAAAOc-mMIo5LlRKrpDD3LTCSpySe_f'
+          onChange={handleRecaptchaChange}
+        />
+        <p className='text-red-600'>{requestVerificationText}</p>
+      </div>
       {sending ? (
         <div className='mt-[28px]'>Sending request...</div>
       ) : formSent ? (

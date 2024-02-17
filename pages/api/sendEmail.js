@@ -1,11 +1,12 @@
+/* eslint-disable import/no-anonymous-default-export */
 // pages/api/sendEmail
 
 import nodemailer from 'nodemailer';
+import verifyRecaptcha from '@/middleware/recaptchaMiddleware';
 
-export default async function handler(req, res) {
+const handler = async (req, res) => {
   if (req.method === 'POST') {
     const formData = req.body;
-
     // Create a Nodemailer transporter
     const transporter = nodemailer.createTransport({
       service: 'gmail',
@@ -37,7 +38,6 @@ export default async function handler(req, res) {
         <p><strong>Additional notes: </strong> ${formData.additionalNotes}</p>
       </div>`,
       });
-
       res.status(200).json({ message: 'Email sent successfully' });
     } catch (error) {
       console.error('Error sending email:', error);
@@ -47,4 +47,10 @@ export default async function handler(req, res) {
     res.setHeader('Allow', ['POST']);
     res.status(405).end('Method Not Allowed');
   }
+};
+
+export default function (req, res) {
+  verifyRecaptcha(req, res, () => {
+    handler(req, res); // Pass control to the route handler
+  });
 }
