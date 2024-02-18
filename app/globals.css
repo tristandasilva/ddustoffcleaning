@@ -132,9 +132,7 @@ li a {
     line-height: 1.5;
     border: none;
     text-decoration: #ffe8a4 underline 5px;
-    -webkit-text-decoration: #ffe8a4 underline 5px;
     text-underline-offset: 5px;
-    -webkit-text-underline-offset: 5px;
   }
 }
 
@@ -164,6 +162,11 @@ li a {
 .form-container label {
   display: block;
   width: 100%;
+}
+
+.input {
+  -webkit-appearance: none;
+  appearance: none;
 }
 
 .form-container input[type='text'],
