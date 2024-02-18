@@ -13,17 +13,21 @@ html {
 }
 
 .hero-section,
-.page-banner {
+.page-banner,
+.cta {
   border-width: 1px 0px;
   border-color: rgb(211, 211, 211);
 }
 
 .page-banner {
-  background-image: url('/hero-img-2.png');
-  height: 25vh;
+  background-image: url('/banner-img-1.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 20vh;
   position: relative;
   letter-spacing: 4px;
   text-align: center;
+  margin-bottom: 50px;
 }
 
 .hero-section {
@@ -32,6 +36,42 @@ html {
   background-size: cover;
   height: 75vh;
   position: relative;
+}
+
+.cta {
+  background-image: url('/banner-img-2.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  height: 45vh;
+}
+
+@media screen and (max-width: 640px) {
+  .hero-section {
+    height: 55vh;
+    text-align: center;
+  }
+
+  .hero-content {
+    align-items: center;
+    margin: 0;
+    padding: 15px;
+  }
+
+  .cta {
+    height: 60vh;
+  }
+
+  .page-banner {
+    height: 15vh;
+    margin-bottom: 35px;
+  }
+}
+
+@media screen and (min-width: 1024px) and (min-height: 760px) {
+  .hero-section {
+    height: 50vh;
+  }
 }
 
 .overlay {
@@ -90,6 +130,20 @@ li a {
 
 .dropShadow {
   box-shadow: 0px 3px 20px #ebebeb;
+}
+
+.arrow-icon {
+  color: var(--darker-blue);
+  margin-top: 3px;
+}
+
+.services-cta {
+  transition-property: all;
+  transition-duration: 500ms;
+}
+
+.services-cta:hover {
+  gap: 20px;
 }
 
 .form-container {

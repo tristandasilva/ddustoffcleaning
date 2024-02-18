@@ -1,10 +1,11 @@
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { FaLongArrowAltRight } from 'react-icons/fa';
 
 const AboutLayout = () => {
   return (
-    <div id='about' className='my-[100px] px-[25px] md:px-[100px] mt-20'>
+    <div id='about' className='mb-[150px] px-[25px] md:px-[100px] mt-20'>
       <div className='flex gap-10 lg:gap-28 flex-col lg:flex-row justify-between lg:justify-center items-center'>
         <div className='flex-shrink-0'>
           <Image
@@ -15,7 +16,7 @@ const AboutLayout = () => {
           />
         </div>
         <div className='max-w-[550px] flex-shrink text-center md:text-left'>
-          <h3 className='text-[32px]'>
+          <h3 className='text-[32px] font-medium text-black-blue'>
             A family owned business, cleaning with love.
           </h3>
           <p className='text-[18px] font-sans font-light mt-4 mb-5'>
@@ -25,12 +26,19 @@ const AboutLayout = () => {
             fully understand your cleaning and organizational needs, so that we
             can provide a solution that best suits your necessities.
           </p>
-          <Link
-            href='#services-section'
-            className='font-sans font-medium text-blue-500'
-          >
-            See our services
-          </Link>
+          <div className='flex justify-center md:justify-start'>
+            <div className='flex items-center gap-3 services-cta'>
+              <Link
+                href='#services'
+                className='font-sans font-medium text-blue-500 underline'
+              >
+                See our services
+              </Link>
+              <div>
+                <FaLongArrowAltRight fontSize={18} className='arrow-icon' />
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>

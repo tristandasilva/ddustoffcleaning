@@ -2,7 +2,7 @@ import React from 'react';
 
 const SectionTitle = ({ title }) => {
   return (
-    <h2 className='boxShad uppercase w-auto text-center self-center px-5 mb-8 md:mb-16'>
+    <h2 className='boxShad uppercase w-auto text-center text-black-blue tracking-wide font-medium self-center px-5 mb-8 md:mb-16'>
       {title}
     </h2>
   );
