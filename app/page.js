@@ -1,10 +1,10 @@
-import Footer from './components/Footer';
 import Navbar from './components/nav/Navbar';
-import AboutLayout from './components/layouts/AboutLayout';
-import CtaLayout from './components/layouts/CtaLayout';
 import HeroLayout from './components/layouts/HeroLayout';
+import AboutLayout from './components/layouts/AboutLayout';
 import ServicesLayout from './components/layouts/ServicesLayout';
 import TestimonialsLayout from './components/layouts/TestimonialsLayout';
+import CtaLayout from './components/layouts/CtaLayout';
+import Footer from './components/Footer';
 
 export default function Home() {
   return (
