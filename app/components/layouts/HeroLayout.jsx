@@ -10,7 +10,7 @@ const HeroLayout = () => {
             <h1 className='text-[38px] md:text-[48px] xl:text-[50px] 2xl:text-[54px] font-regular leading-tight uppercase'>
               The only cleaning service you&lsquo;ll need
             </h1>
-            <p className='font-sans text-gray-700 text-[16px] mt-3 mb-8 2xl:max-w-[550px]'>
+            <p className='font-sans text-gray-700 text-[16px] md:text-[18px] mt-3 mb-8 2xl:max-w-[550px]'>
               Providing a wide array of convenient cleaning services in the
               Ottawa-Gatineau area.
             </p>

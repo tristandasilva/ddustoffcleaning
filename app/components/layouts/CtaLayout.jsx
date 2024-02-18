@@ -3,7 +3,7 @@ import StyledButton from '../StyledButton';
 
 const CtaLayout = () => {
   return (
-    <div className='cta mt-20 md:mt-28 md:mb-10 '>
+    <div className='cta mt-20 md:mt-28 mb-5 md:mb-10 '>
       <div className='overlay'>
         <div className='p-7 md:p-0 flex flex-col h-full gap-10 justify-center items-center text-center'>
           <div className='text-[32px] text-black-blue uppercase font-medium'>

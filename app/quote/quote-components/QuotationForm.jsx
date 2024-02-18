@@ -342,7 +342,7 @@ const QuotationForm = () => {
         <p className='text-red-600'>{requestVerificationText}</p>
       </div>
       {sending ? (
-        <div className='mt-[28px]'>Sending request...</div>
+        <div className='sending'>Sending request...</div>
       ) : formSent ? (
         <div className='form-sent'>
           Request sent! We will be in touch with you shortly, thank you.
