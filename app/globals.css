@@ -48,8 +48,9 @@ html {
 
 @media screen and (max-width: 640px) {
   .hero-section {
-    height: 55vh;
+    height: 60vh;
     text-align: center;
+    background-position-x: -40px;
   }
 
   .hero-content {
@@ -59,7 +60,9 @@ html {
   }
 
   .cta {
-    height: 60vh;
+    height: 65vh;
+    background-image: url('/cta-img-mobile.png');
+    background-position-y: -100px;
   }
 
   .page-banner {

@@ -17,7 +17,7 @@ const TestimonialSlider = ({ testimonials }) => {
   }, [testimonials.length]);
 
   return (
-    <div className='flex justify-center'>
+    <div className='flex justify-center px-4 md:px-0'>
       <Testimonial testimonial={testimonials[currentTestimonialIndex]} />
     </div>
   );

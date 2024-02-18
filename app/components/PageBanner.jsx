@@ -6,7 +6,7 @@ const PageBanner = ({ text }) => {
       <div className='page-banner'>
         <div className='overlay'>
           <div className='flex justify-center items-center w-full h-full'>
-            <h1 className='text-3xl md:text-4xl text-black-blue font-medium tracking-normal uppercase px-2'>
+            <h1 className='text-2xl md:text-4xl text-black-blue tracking-normal uppercase px-2'>
               {text}
             </h1>
           </div>
