@@ -337,8 +337,12 @@ const QuotationForm = () => {
           onChange={handleChange}
         ></textarea>
       </label>
-      <div className='mt-5 flex flex-col gap-2'>
-        <ReCAPTCHA sitekey={siteKey} onChange={handleRecaptchaChange} />
+      <div className='mt-5 flex flex-col gap-2 w-full'>
+        <ReCAPTCHA
+          sitekey={siteKey}
+          onChange={handleRecaptchaChange}
+          className='w-full'
+        />
         <p className='text-red-600'>{requestVerificationText}</p>
       </div>
       {sending ? (
