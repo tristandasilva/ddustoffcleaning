@@ -1,7 +1,7 @@
-import Footer from '../components/Footer';
-import Navbar from '../components/nav/Navbar';
-import PageBanner from '../components/PageBanner';
-import FormLayout from '../components/quotation/FormLayout';
+import Footer from './components/Footer';
+import Navbar from './components/nav/Navbar';
+import PageBanner from './components/PageBanner';
+import FormLayout from './components/quotation/FormLayout';
 
 export default function Quote() {
   return (
