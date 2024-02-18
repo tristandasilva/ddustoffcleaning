@@ -19,6 +19,11 @@ const faqs = [
     answer:
       'Amet lacus molestie augue egestas fames elementum, diam dictum consectetur. Platea diam sed felis velit. Nunc quam mattis mattis semper quam odio ac.  Sem dapibus ornare commodo blandit adipiscing vitae at. Nunc quam mattis mattis.',
   },
+  {
+    question: 'Is the walkthrough included in the quotation?',
+    answer:
+      'Amet lacus molestie augue egestas fames elementum, diam dictum consectetur. Platea diam sed felis velit. Nunc quam mattis mattis semper quam odio ac.  Sem dapibus ornare commodo blandit adipiscing vitae at. Nunc quam mattis mattis.',
+  },
 ];
 
 export default faqs;

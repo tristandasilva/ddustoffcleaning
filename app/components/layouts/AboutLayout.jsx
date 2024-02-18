@@ -5,7 +5,10 @@ import { FaLongArrowAltRight } from 'react-icons/fa';
 
 const AboutLayout = () => {
   return (
-    <div id='about' className='mb-[150px] px-[25px] md:px-[100px] mt-20'>
+    <div
+      id='about'
+      className='mb-28 md:mb-[150px] px-[25px] md:px-[100px] mt-20'
+    >
       <div className='flex gap-10 lg:gap-28 flex-col lg:flex-row justify-between lg:justify-center items-center'>
         <div className='flex-shrink-0'>
           <Image
@@ -16,7 +19,7 @@ const AboutLayout = () => {
           />
         </div>
         <div className='max-w-[550px] flex-shrink text-center md:text-left'>
-          <h3 className='text-[32px] font-medium text-black-blue'>
+          <h3 className='text-[32px] text-black-blue'>
             A family owned business, cleaning with love.
           </h3>
           <p className='text-[18px] font-sans font-light mt-4 mb-5'>
