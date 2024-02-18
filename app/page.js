@@ -1,4 +1,4 @@
-import Navbar from './components/nav/Navbar';
+import Navbar from './components/navigation/Navbar';
 import HeroLayout from './components/layouts/HeroLayout';
 import AboutLayout from './components/layouts/AboutLayout';
 import ServicesLayout from './components/layouts/ServicesLayout';

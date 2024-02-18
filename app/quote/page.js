@@ -1,5 +1,5 @@
 import Footer from '../components/Footer';
-import Navbar from '../components/nav/Navbar';
+import Navbar from '../components/navigation/Navbar';
 import PageBanner from '../components/PageBanner';
 import FormLayout from '../components/quotation/FormLayout';
 
