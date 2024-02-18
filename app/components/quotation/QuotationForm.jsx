@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import services from '@/app/components/Services/services';
+import services from '@/app/components/service/services';
 import ReCAPTCHA from 'react-google-recaptcha';
 
 const QuotationForm = () => {

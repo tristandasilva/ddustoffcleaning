@@ -1,8 +1,8 @@
 import React from 'react';
 import Logo from './Logo';
-import Dropdown from './DropdownMenu/Dropdown';
-import DropdownItemList from './DropdownMenu/DropdownItemList';
-import { dropdownItems } from './DropdownMenu/dropdownItems';
+import Dropdown from './Dropdown';
+import NavItemList from './NavItemList';
+import navItems from './navItems';
 
 const Navbar = () => {
   return (
@@ -13,7 +13,7 @@ const Navbar = () => {
         </div>
         <div>
           <ul className='flex absolute md:static md:gap-7 mt-[-100%] md:mt-[inherit]'>
-            <DropdownItemList dropdownItems={dropdownItems} />
+            <NavItemList navItems={navItems} />
           </ul>
         </div>
         <div className='md:absolute md:hidden'>

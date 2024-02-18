@@ -2,8 +2,8 @@
 
 import React, { useState } from 'react';
 import Image from 'next/image';
-import { dropdownItems } from './dropdownItems';
-import DropdownItemList from './DropdownItemList';
+import NavItemList from './NavItemList';
+import navItems from './navItems';
 
 const Dropdown = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -23,9 +23,9 @@ const Dropdown = () => {
         ></Image>
       </button>
       {isOpen && (
-        <div className='absolute border p-5 right-3 rounded z-50 bg-white'>
-          <ul className='flex flex-col gap-3'>
-            <DropdownItemList dropdownItems={dropdownItems} />
+        <div className='absolute border px-4 h-[220px] right-3 rounded z-50 bg-[#d2f2fa] uppercase'>
+          <ul className='flex flex-col h-full justify-evenly items-center'>
+            <NavItemList navItems={navItems} />
           </ul>
         </div>
       )}

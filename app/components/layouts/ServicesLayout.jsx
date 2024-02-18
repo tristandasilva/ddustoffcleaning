@@ -1,6 +1,6 @@
 import React from 'react';
-import ServiceCardList from '../Services/ServiceCardList';
-import services from '../Services/services';
+import ServiceCardList from '../service/ServiceCardList';
+import services from '../service/services';
 import SectionTitle from '../SectionTitle';
 
 const ServicesLayout = () => {

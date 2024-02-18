@@ -1,4 +1,4 @@
-export const dropdownItems = [
+export const navItems = [
   {
     text: 'About',
     path: '/#about',
@@ -16,3 +16,5 @@ export const dropdownItems = [
     path: '/faq',
   },
 ];
+
+export default navItems;

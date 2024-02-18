@@ -1,5 +1,5 @@
 import Footer from './components/Footer';
-import Navbar from './components/Nav/Navbar';
+import Navbar from './components/nav/Navbar';
 import StyledButton from './components/StyledButton';
 import AboutLayout from './components/layouts/AboutLayout';
 import CtaLayout from './components/layouts/CtaLayout';

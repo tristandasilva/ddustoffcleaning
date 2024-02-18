@@ -1,7 +1,6 @@
 import React from 'react';
 import FaqList from './FaqList';
-import faqs from '../faqs';
-import SectionTitle from '../../components/SectionTitle';
+import faqs from './faqs';
 
 const FaqLayout = () => {
   return (

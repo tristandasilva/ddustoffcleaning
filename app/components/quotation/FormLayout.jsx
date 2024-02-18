@@ -1,6 +1,4 @@
 import React from 'react';
-import SectionTitle from '@/app/components/SectionTitle';
-import FaqList from '@/app/faq/faq-components/FaqList';
 import QuotationForm from './QuotationForm';
 
 const FormLayout = () => {

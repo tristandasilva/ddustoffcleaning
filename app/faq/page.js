@@ -1,7 +1,6 @@
-import Navbar from '../components/Nav/Navbar';
-import SectionTitle from '../components/SectionTitle';
+import Navbar from '../components/nav/Navbar';
 import Footer from '../components/Footer';
-import FaqLayout from './faq-components/FaqLayout';
+import FaqLayout from '../components/faq/FaqLayout';
 import PageBanner from '../components/PageBanner';
 
 export default function Faq() {
