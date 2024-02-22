@@ -7,7 +7,7 @@ const faqs = [
   {
     question: 'Do I need to be at home during the cleaning services?',
     answer:
-      "No, your presence is not required during the cleaning session. If you won't be home, please provide instructions in advance to ensure everything is taken care of according to your preferences.",
+      "No, your presence is not required during the cleaning session. If you won't be home, kindly provide instructions beforehand to ensure a seamless experience and prevent any issues or inconveniences when entering your home.",
   },
   {
     question: 'What should I do before my cleaner arrives?',

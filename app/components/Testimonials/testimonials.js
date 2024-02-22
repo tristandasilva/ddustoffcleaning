@@ -1,19 +1,19 @@
 const testimonials = [
   {
     clientName: 'Siobhan',
-    text: "I can't express how delighted I am with the excellent job done by Dalhia! It's such a treat to come home to a sparkling clean home. Thank you so much!",
+    text: 'You have no idea how much I love coming home on these days, what a treat to come home to a such a clean home. Thank you so much!',
   },
   {
     clientName: 'Emily',
-    text: 'A big thank you to Dalhia for consistently making our house look amazing! The boys are always thrilled with how she arranges their beds. We truly appreciate your hard work!',
+    text: 'Thank you so much! The house looks great as always, and my boys are thrilled every time about how you make their beds!',
   },
   {
     clientName: 'Lucy',
-    text: "Dalhia's work is truly awesome! Thank you for your dedication and attention to detail.",
+    text: 'Awesome work! Thank you.',
   },
   {
     clientName: 'Eric & Cathy',
-    text: "We're extremely pleased with the results! The house looks fantastic, and we're grateful for Dalhia's efforts.",
+    text: 'The house looks great, we really appreciate it!',
   },
 ];
 
