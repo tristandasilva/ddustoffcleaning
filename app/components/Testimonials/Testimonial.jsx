@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 const Testimonial = ({ testimonial }) => {
   return (
-    <div className='p-8 md:p-10 md:max-w-[90%] 2xl:max-w-[80%] min-w-[500px] font-sans text-gray-700 border-slate-600 dropShadow'>
+    <div className='p-8 md:p-10 md:max-w-[90%] 2xl:max-w-[80%] md:min-w-[500px] font-sans text-gray-700 border-slate-600 dropShadow'>
       <div className='-pr-4'>
         <Image
           src={'/quotation.svg'}
