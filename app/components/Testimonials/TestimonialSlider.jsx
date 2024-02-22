@@ -11,7 +11,7 @@ const TestimonialSlider = ({ testimonials }) => {
       setCurrentTestimonialIndex(
         (prevIndex) => (prevIndex + 1) % testimonials.length
       );
-    }, 3000);
+    }, 5000);
 
     return () => clearInterval(testimonialInterval);
   }, [testimonials.length]);

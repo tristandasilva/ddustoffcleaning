@@ -2,37 +2,35 @@ const services = [
   {
     type: 'Residential Cleaning',
     description:
-      "Quite often it's hard to balance work, family and other responsibilities. Let us lighten your load and get you more time to do the things you love.",
+      'Let us lighten your load and give you more time to enjoy life.',
     image: '/residential-thumb.png',
   },
   {
     type: 'Office Cleaning',
     description:
-      'While you focus on running your business and managing your clients, let us get rid of the worry about routine office cleaning.',
+      'Focus on your business while we take care of office cleaning.',
     image: '/office-thumb.png',
   },
   {
     type: 'Airbnb / Rental Cleaning',
-    description:
-      "Quite often it's hard to balance work, family and other responsibilities. Let us lighten your load and get you more time to do the things you love.",
+    description: 'Free up your time by letting us handle your cleaning needs.',
     image: '/airbnb-thumb.png',
   },
   {
     type: 'Pre/Post Move Cleanup',
     description:
-      'oving can be very hectic and time consuming. Let us help make your life less stressful.',
+      'Make moving less stressful with our efficient cleaning services.',
     image: '/moving-thumb.png',
   },
   {
     type: 'Organization / Decluttering',
-    description:
-      'No matter the occasion, we got you covered! Whether you need an extra hand or just want to enjoy a spotless, organized home.',
+    description: 'Enjoy a spotless, organized home with our help.',
     image: '/declutter-thumb.png',
   },
   {
     type: 'Laundry & Ironing',
     description:
-      "She'd. Is winged wherein subdue. Replenish the likeness fifth signs. Us grass two stars over land also shall, subdue",
+      'Let us take care of your laundry and ironing, so you can enjoy fresh clothes with no stress.',
     image: '/laundry-thumb.png',
   },
 ];

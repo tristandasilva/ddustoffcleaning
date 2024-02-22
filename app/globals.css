@@ -57,6 +57,7 @@ html {
     align-items: center;
     margin: 0;
     padding: 15px;
+    animation-duration: 0.5s;
   }
 
   .cta {
@@ -106,12 +107,11 @@ li a {
   background-color: #b4ebf8;
 }
 
-@media screen and (max-width: 768px) {
+/* @media screen and (max-width: 768px) {
   .styledBtn {
-    padding: 15px 20px;
     width: 100%;
   }
-}
+} */
 
 .boxShad {
   border-bottom: 20px solid #ffefbe;

@@ -11,7 +11,7 @@ const handler = async (req, res) => {
     const transporter = nodemailer.createTransport({
       service: 'gmail',
       auth: {
-        user: 'catstestingdev@gmail.com',
+        user: process.env.EMAIL,
         pass: process.env.EMAIL_PASSWORD,
       },
     });
@@ -19,8 +19,8 @@ const handler = async (req, res) => {
     try {
       // Send mail with defined transport object
       await transporter.sendMail({
-        from: 'DDust Form Submission <catstestingdev@gmail.com>',
-        to: `tristan.dasilva98@gmail.com`,
+        from: `DDust Form Submission <${process.env.EMAIL}>`,
+        to: process.env.SEND_TO,
         subject: `New Request`,
         html: `<div>
         <div></div>

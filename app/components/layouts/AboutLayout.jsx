@@ -33,7 +33,7 @@ const AboutLayout = () => {
             <div className='flex items-center gap-3 services-cta'>
               <Link
                 href='#services'
-                className='font-sans font-medium text-blue-500 underline'
+                className='font-sans font-medium text-darker-blue underline'
               >
                 See our services
               </Link>

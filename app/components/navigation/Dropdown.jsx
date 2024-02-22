@@ -23,7 +23,7 @@ const Dropdown = () => {
         ></Image>
       </button>
       {isOpen && (
-        <div className='absolute border px-4 h-[220px] right-3 rounded z-50 bg-[#d2f2fa] uppercase'>
+        <div className='absolute border px-4 h-[220px] right-3 z-50 bg-[#d2f2fa] uppercase'>
           <ul className='flex flex-col h-full justify-evenly items-center'>
             <NavItemList navItems={navItems} />
           </ul>
