@@ -20,6 +20,9 @@ export default function RootLayout({ children }) {
     <html lang='en'>
       <head>
         <link rel='icon' href='/favicon.png' />
+        <meta property='og:image' content='/opengraph-image.png' />
+        <meta property='og:title' content='DDust Off Cleaning' />
+        <meta property='og:image' content='Cleaning with love.' />
       </head>
       <body className={playfair.className}>{children}</body>
     </html>
