@@ -1,11 +1,11 @@
 export const navItems = [
   {
     text: 'About',
-    path: '/#about',
+    path: '#about',
   },
   {
     text: 'Services',
-    path: '/#services',
+    path: '#services',
   },
   {
     text: 'Request A Quote',
